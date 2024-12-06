@@ -3,10 +3,23 @@
 ## Overview
 This repository contains all the resources and deliverables for the project **"Customer Churn Prediction in the Telecom Industry"**, completed as part of **DATASCI 3000A - Introduction to Machine Learning** (Fall 2024). The project aims to predict customer churn in the telecom industry using machine learning techniques and data analytics. The results are summarized in the final report provided in this repository.
 
-## Repository Structure
-The repository is organized as follows:
+### Directory Descriptions
 
-Project/ ├── Dataset/ │ ├── archive (1).zip # Compressed raw dataset │ ├── Customer Churn Dataset.csv # Cleaned dataset used for analysis ├── Python Notebooks/ │ ├── catboost_info/ │ │ ├── learn/ │ │ │ └── events.out.tfevents # CatBoost training logs │ │ ├── tmp/ │ │ ├── catboost_training.json # CatBoost training parameters │ │ ├── learn_error.tsv # Training error metrics │ │ ├── time_left.tsv # Time estimation logs │ ├── ML Team 5 Group Project.ipynb # Team's collaborative Jupyter Notebook │ ├── ML_CVUpdatedCode.ipynb # Final notebook with updated model code ├── Report/ │ └── Group5_IEEE_Draft2_CustomerChurnReport.pdf # Final project report
+- **Dataset/**: Contains raw data files used for model training.
+  - `archive (1).zip`: Original dataset file.
+  - `Customer Churn Dataset.csv`: Unzipped dataset file used for analysis.
+
+- **Python Notebooks/**: Contains all Jupyter notebooks for the project, including CatBoost-related information and training results.
+  - **catboost_info/**: Stores CatBoost training logs and temporary files.
+    - **learn/**: Holds TensorBoard events generated during model training.
+    - **tmp/**: Temporary files for tracking training progress.
+  - `Customer Churn Dataset.csv`: Another version of the dataset used for Jupyter notebooks.
+  - `ML Team 5 Group Project.ipynb`: Team's group work Jupyter notebook for model development.
+  - `ML_CVUpdatedCode.ipynb`: Notebook for cross-validation and model update.
+
+- **Report/**: Includes documents and reports related to the project.
+  - `Group5_IEEE_Draft2_CustomerChurnReport.pdf`: Draft report for the IEEE format.
+  - `readme.md`: This file, providing an overview of the repository structure.
 
 
 ## Project Summary
