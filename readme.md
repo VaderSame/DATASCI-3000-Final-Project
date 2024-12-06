@@ -1,115 +1,66 @@
-Customer Churn Prediction in the Telecom Industry
+# Customer Churn Prediction in the Telecom Industry
 
-Overview
+## Overview
+This repository contains all the resources and deliverables for the project **"Customer Churn Prediction in the Telecom Industry"**, completed as part of **DATASCI 3000A - Introduction to Machine Learning** (Fall 2024). The project aims to predict customer churn in the telecom industry using machine learning techniques and data analytics. The results are summarized in the final report provided in this repository.
 
-This project aims to mitigate customer churn in the telecom industry by identifying at-risk customers using data analytics and machine learning techniques. The analysis involves various models like Logistic Regression, Support Vector Machines, Random Forest, Gradient Boosting, AdaBoost, and CatBoost to predict churn risk, with a focus on model evaluation and selecting the best performing model based on recall and balanced accuracy.
-
-Repository Structure
-
+## Repository Structure
 The repository is organized as follows:
 
-Dataset
+Project/ ├── Dataset/ │ ├── archive (1).zip # Compressed raw dataset │ ├── Customer Churn Dataset.csv # Cleaned dataset used for analysis ├── Python Notebooks/ │ ├── catboost_info/ │ │ ├── learn/ │ │ │ └── events.out.tfevents # CatBoost training logs │ │ ├── tmp/ │ │ ├── catboost_training.json # CatBoost training parameters │ │ ├── learn_error.tsv # Training error metrics │ │ ├── time_left.tsv # Time estimation logs │ ├── ML Team 5 Group Project.ipynb # Team's collaborative Jupyter Notebook │ ├── ML_CVUpdatedCode.ipynb # Final notebook with updated model code ├── Report/ │ └── Group5_IEEE_Draft2_CustomerChurnReport.pdf # Final project report
 
-Dataset/
 
-archive (1).zip: Contains the original dataset files.
+## Project Summary
+**Title:** Customer Churn Prediction in the Telecom Industry  
+**Authors:** Dani Alex Parayil, Garima Gambhir, Ritika Pandey, Semal Shastri, Sumedha  
 
-Customer Churn Dataset.csv: The main dataset used for the analysis.
+### Abstract
+This project addresses the challenge of customer churn in the telecom industry by employing machine learning techniques to predict at-risk customers and identify the underlying factors contributing to churn. Models including Logistic Regression, Support Vector Machines (SVC), Random Forest, Gradient Boosting, AdaBoost, and CatBoost were used for analysis, with CatBoost emerging as the best-performing model.
 
-Python Notebooks
+### Key Highlights:
+- **Dataset:** The dataset includes 7043 customer records with 20 features detailing customer demographics, service usage, satisfaction, and contract types.
+- **Preprocessing:** Steps included handling missing data, encoding categorical variables, and scaling numerical features.
+- **Models Used:** Logistic Regression, SVC, Random Forest, Gradient Boosting, AdaBoost, and CatBoost.
+- **Evaluation Metrics:** Precision, Recall, F1-Score, Balanced Accuracy, AUC-ROC, and Geometric Mean.
+- **Best Model:** CatBoost, due to its handling of categorical variables, robustness with imbalanced datasets, and strong performance metrics.
 
-Python Notebooks/
+## Files and Notebooks
+- **Dataset:** 
+  - `Customer Churn Dataset.csv` contains the cleaned data used for analysis.
+- **Notebooks:** 
+  - `ML Team 5 Group Project.ipynb` includes EDA, preprocessing, and model training for all algorithms.
+  - `ML_CVUpdatedCode.ipynb` contains the final updated code with hyperparameter tuning and cross-validation.
+- **Reports:**
+  - `Group5_IEEE_Draft2_CustomerChurnReport.pdf` is the final report detailing the methodology, results, and analysis.
 
-Customer Churn Dataset.csv: Another copy of the dataset, used in some analysis.
+## How to Run the Code
+1. Clone the repository.
+2. Install required Python libraries: `pip install -r requirements.txt`.
+3. Open the Jupyter notebooks in the `Python Notebooks/` directory to run the analyses.
+4. Refer to `Group5_IEEE_Draft2_CustomerChurnReport.pdf` for detailed explanations of the methodology and results.
 
-ML Team 5 Group Project.ipynb: Jupyter notebook containing the full analysis and modeling of customer churn.
+## Results
+- **Best Performing Model:** CatBoost
+- **Key Insights:** 
+  - Month-to-month contracts and internet service usage are major factors contributing to churn.
+  - Senior citizens and customers without partners show higher churn rates.
+  - Retention strategies should focus on high-risk demographics and contract types.
 
-ML_CVUpdatedCode.ipynb: Notebook containing updated cross-validation code and metrics.
+## Future Work
+- Hyperparameter optimization using grid search and Bayesian methods.
+- Exploring deep learning models for improved performance.
+- Enhancing interpretability with tools like SHAP or LIME.
 
-catboost_info/
+## Team Contributions
+1. **Dani Alex Parayil:** EDA, data visualization, CatBoost implementation, and final report preparation.
+2. **Garima Gambhir:** Logistic Regression analysis and data preprocessing.
+3. **Ritika Pandey:** SVC implementation and report writing.
+4. **Semal Shastri:** Random Forest analysis and preprocessing.
+5. **Sumedha:** Gradient Boosting, AdaBoost implementation, and final code integration.
 
-learn/ and tmp/: CatBoost training logs and metadata.
-
-catboost_training.json: JSON file containing details of the CatBoost model training.
-
-learn_error.tsv, time_left.tsv: Files that record training error metrics and time estimates during CatBoost training.
-
-Report
-
-Report/
-
-Group5_IEEE_Draft2_CustomerChurnReport.pdf: Final report detailing the project, findings, and analysis.
-
-Project Details
-
-1. Data Pre-processing
-
-The dataset used has 7043 customer records with 20 features, broadly categorized into customer demographics, service usage, satisfaction level, and contract types.
-
-Missing values were treated appropriately (e.g., replacing with mean values), and irrelevant features were dropped to improve the model's accuracy.
-
-Features were scaled and categorical variables encoded using one-hot and label encoding.
-
-2. Machine Learning Models
-
-The following machine learning models were implemented and evaluated for predicting customer churn:
-
-Logistic Regression: Used as the base model due to its simplicity and interpretability.
-
-Support Vector Classifier (SVC): Provided good recall but required intensive computation for larger datasets.
-
-Random Forest: Good at handling class imbalance, with high accuracy in predicting non-churn cases.
-
-Gradient Boosting: Achieved the highest AUC score, balancing precision and recall.
-
-AdaBoost: Focused on reducing false positives, achieved high AUC and geometric mean.
-
-CatBoost: Selected as the best model due to its capability to handle categorical variables without pre-processing and its robustness to imbalanced datasets.
-
-3. Evaluation Metrics
-
-Models were evaluated based on several metrics, including accuracy, precision, recall, F1-score, and AUC-ROC.
-
-CatBoost was chosen as the final model because of its high recall, making it suitable for identifying at-risk customers, thus supporting retention efforts.
-
-Team Contribution
-
-Dani Alex Parayil: Exploratory Data Analysis (EDA), visualizations, CatBoost implementation, and report preparation.
-
-Garima Gambhir: EDA, preprocessing for Logistic Regression, and visualizations.
-
-Ritika Pandey: EDA, preprocessing for SVC, report preparation.
-
-Semal Shastri: EDA, preprocessing for Random Forest and decision trees.
-
-Sumedha: Preprocessing for Gradient Boost and AdaBoost, final code compilation.
-
-Report
-
-For more detailed information about the project, the modeling approaches, and the results, please refer to the final report.
-
-How to Run the Project
-
-Extract the dataset from the Dataset/archive (1).zip and place it in the appropriate directory.
-
-Use the Jupyter notebooks (ML Team 5 Group Project.ipynb and ML_CVUpdatedCode.ipynb) to explore the data, pre-process it, and run machine learning models.
-
-Ensure dependencies are installed. Key dependencies include Scikit-Learn, XGBoost, and CatBoost.
-
-Dependencies
-
-Python 3.8+
-
-Jupyter Notebook
-
-Scikit-Learn
-
-XGBoost
-
-CatBoost
-
-Pandas, Numpy, Matplotlib
-
-Future Work
-
-The next steps include experimenting with deep learning techniques, such as neural networks, to improve prediction rates and using tools like SHAP or LIME for better interpretability of churn predictions.
+## Contact
+For further inquiries, please contact:  
+- Dani Alex Parayil: dparayil@uwo.ca
+- Garima Gambhir: ggambhi@uwo.ca
+- Ritika Pandey: rpande6@uwo.ca
+- Semal Shastri: sshastr@uwo.ca
+- Sumedha: sgalgali@uwo.ca
