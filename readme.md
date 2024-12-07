@@ -41,7 +41,7 @@ This project addresses the challenge of customer churn in the telecom industry b
   - `Customer Churn Dataset.csv` contains the cleaned data used for analysis.
 - **Notebooks:** 
   - `ML Team 5 Group Project.ipynb` includes EDA, preprocessing, and model training for all algorithms.
-  - `ML_CVUpdatedCode.ipynb` contains the final updated code with hyperparameter tuning and cross-validation.
+  - `ML_CVUpdatedCode.ipynb` Model Evaluation using 10-fold cross validation and model evaluation using recall, precision, geometric mean, balanced accuracy, AUC, and confusion matrix on unseen data.
 - **Reports:**
   - `Group5_IEEE_Draft2_CustomerChurnReport.pdf` is the final report detailing the methodology, results, and analysis.
 
